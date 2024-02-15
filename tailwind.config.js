@@ -1,20 +1,28 @@
 /** @type {import('tailwindcss').Config} */
+import {
+  CUSTOM_BLACK,
+  CUSTOM_WHITE,
+  DANGER,
+  PRIMARY,
+  SECONDARY,
+  SUCCESS,
+} from "./src/constants/colors";
 
 export default {
-
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 
   theme: {
-    colors: {
-      'primary': '#1fb6ff',
-      'secondary': '#ff49db',
-      'custom-white': '#f2f2f2',
-      'custom-black': '#13ce66',
+    extend: {
+      colors: {
+        primary: PRIMARY,
+        secondary: SECONDARY,
+        danger: DANGER,
+        success: SUCCESS,
+        "custom-white": CUSTOM_WHITE,
+        "custom-black": CUSTOM_BLACK,
+      },
     },
-    extend: {},
-
   },
 
   plugins: [],
-
 };
